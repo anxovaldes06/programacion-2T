@@ -1,37 +1,31 @@
-package program2;
+package programacion2;
 
-
-
-import java.util.Scanner;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ejercicio1 {
+
+	public static void main (String [] args) {
+		List<String> compis = new ArrayList<String>();
+		compis.add("Yelmilena P");
+		compis.add("Jorge F");
+		compis.add("Laura S");
+		compis.add("Anxo Fo");
+		compis.add("Carla C");
+		compis.add("Manuel C");
+		
+		System.out.println("conforENHANCED\n");
+		
+		for( String puntero : compis) {
+			System.out.println(puntero );		
+		}
+		System.out.println("\n");
+		
+		System.out.println("conforEACH\n");
+		compis.forEach(puntero -> System.out.println(puntero));
+		
+	}
 	
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Ingrese la primera cadena: ");
-        String cadena1 = sc.nextLine();
-
-        System.out.print("Ingrese la segunda cadena: ");
-        String cadena2 = sc.nextLine();
-
-        String resultado = "";
-        int i = 0;
-
-        while (i < cadena1.length() && i < cadena2.length()) {
-            resultado += cadena1.charAt(i);
-            resultado += cadena2.charAt(i);
-            i++;
-        }
-
-        // Agregar lo que sobra si una cadena es más larga
-        resultado += cadena1.substring(i);
-        resultado += cadena2.substring(i);
-
-        System.out.println("Cadena intercalada: " + resultado);
-
-        sc.close();
-    }
+	
+	
 }
